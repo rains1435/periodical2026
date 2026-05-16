@@ -1,0 +1,22 @@
+.inter-regular {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.inter-bold {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+    /* padding: 150px 180px 0px 180px; */
+    /* background-color: red; */
+}
+#daily-element{
+    margin-top: 100px;
+    /* display: flex;
+    flex-wrap: wrap; */
+}
