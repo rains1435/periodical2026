@@ -33,7 +33,7 @@
         padding: 0px 50px;
       }
 
-      @media (max-width: 768px) {
+      @media (max-width: 1115px) {
         .idk {
             display: flex;
             flex-direction: column;
@@ -49,6 +49,9 @@
         p{
             font-size: 10rem;
             width: 100%;
+        }
+        #description{
+            width:90vw
         }
       }
       .top {
@@ -73,6 +76,9 @@
         margin-left: 2vw;
         margin-right: 2vw;
         font-size: 20px;
+      }
+      h1{
+        text-align:center
       }
     </style>
 
@@ -300,7 +306,7 @@
       var w = 700;
       var h = 440;
       function setup() {
-        if (window.innerWidth < 768){
+        if (window.innerWidth < 1115){
             w = window.innerWidth
         }
         var canvas = createCanvas(w, h);
