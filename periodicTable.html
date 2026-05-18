@@ -112,7 +112,7 @@
           name: "Lithium",
           atomicNumber: 3,
           symbol: "Li",
-          description: `Discovery: Lithium was discovered in 1817 by Johan August Arfwedson. <br> Roots of its name: From the Greek word "lithos," which means "stone". Was called this because it was discovered in a solid mineral instead of a plant. <br> 
+          description: `Discovery: Lithium was discovered in 1817 by Johan August Arfwedson. <br> Roots of its name: From the Greek word "lithos," which means "stone". Was called this because it was discovered in a solid mineral instead of a plant. <br>
                     Interesting fact/trivia: Its one of only three elements created in significant amounts during the Big Bang, alongside hydrogen and helium. Some of the lithium on Earth today is 13.8 billion year old cosmic leftovers. (If the 13.8 billion years measured as a year the whole of human history would just be the last 2 seconds.)
 
 `,
@@ -290,48 +290,15 @@
                 ellipse(x + random(-5, 5), y + random(-5, 5), 10);
               }
             }
-<<<<<<< HEAD
-
-            function draw() {
-                if (clicked == true){
-                    background(200)
-                   if (atomicSymbol == "Hg" || atomicSymbol == "Br"){
-                        for (var x = 10;x < width - 5;x += 12){
-                            for (var y = height * 0.75;y < height;y += 10){
-                                ellipse(x + random(-5, 5),y + random(-5,5),10)
-                            }
-                        }
-                    }
-                    else if (typeOfElement == "metal" || typeOfElement == "metalloid"){
-                        for (var x = 10;x < width - 5;x += 12){
-                            for (var y = height * 0.75;y < height;y += 10){
-                                ellipse(x,y,10)
-                            }
-                        }
-                    }
-                    else if (typeOfElement == "nonmetal"){
-                        for (var x = 10;x < width - 5;x += 50){
-                            for (var y = 10;y < height-2.5;y += 50){
-                                // ellipse(x + random(-5, 5),y + random(-5,5),10)
-                                if (random(100) > 50){
-                                     ellipse(x + random(-5, 5),y + random(-5,5),10)
-                                }
-                            }
-                        }
-                    }
-                }
-=======
           } else if (typeOfElement == "metal" || typeOfElement == "metalloid") {
             for (var x = 10; x < width - 5; x += 12) {
               for (var y = height * 0.75; y < height; y += 10) {
                 ellipse(x, y, 10);
               }
->>>>>>> b82a74294b95d10e2f620bc5d955a334fb13f788
             }
           } else if (typeOfElement == "nonmetal") {
             for (var x = 10; x < width - 5; x += 50) {
-              for (var y = 10; y < height / 2.5; y += 50) {
-                // ellipse(x + random(-5, 5),y + random(-5,5),10)
+              for (var y = 10; y < height-2.5; y += 50) {
                 if (random(100) > 50) {
                   ellipse(x + random(-5, 5), y + random(-5, 5), 10);
                 }
