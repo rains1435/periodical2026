@@ -80,6 +80,18 @@
       h1{
         text-align:center
       }
+      @media (max-width:1200px) and (min-width:401px){
+        h1{
+            text-align:left;
+            margin-left:111px
+        }
+      }
+      @media(max-width:400px){
+        h1{
+            text-align:center;
+        }
+      }
+
     </style>
 
     <title>Title</title>
@@ -306,7 +318,7 @@
       var w = 700;
       var h = 440;
       function setup() {
-        if (window.innerWidth < 1115){
+        if (window.innerWidth <= 1115){
             w = window.innerWidth
         }
         var canvas = createCanvas(w, h);
