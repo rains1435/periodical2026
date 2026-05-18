@@ -112,7 +112,8 @@
           name: "Lithium",
           atomicNumber: 3,
           symbol: "Li",
-          description: `Discovery: Lithium was discovered in 1817 by Johan August Arfwedson. <br> Roots of its name: From the Greek word "lithos," which means "stone". Was called this because it was discovered in a solid mineral instead of a plant. <br> Interesting fact/trivia: Its one of only three elements created in significant amounts during the Big Bang, alongside hydrogen and helium. Some of the lithium on Earth today is 13.8 billion year old cosmic leftovers. (If the 13.8 billion years measured as a year the whole of human history would just be the last 2 seconds.)
+          description: `Discovery: Lithium was discovered in 1817 by Johan August Arfwedson. <br> Roots of its name: From the Greek word "lithos," which means "stone". Was called this because it was discovered in a solid mineral instead of a plant. <br>
+                    Interesting fact/trivia: Its one of only three elements created in significant amounts during the Big Bang, alongside hydrogen and helium. Some of the lithium on Earth today is 13.8 billion year old cosmic leftovers. (If the 13.8 billion years measured as a year the whole of human history would just be the last 2 seconds.)
 
 `,
           type: "metal",
@@ -298,8 +299,7 @@
             }
           } else if (typeOfElement == "nonmetal") {
             for (var x = 10; x < width - 5; x += 50) {
-              for (var y = 10; y < height / 2.5; y += 50) {
-                // ellipse(x + random(-5, 5),y + random(-5,5),10)
+              for (var y = 10; y < height-2.5; y += 50) {
                 if (random(100) > 50) {
                   ellipse(x + random(-5, 5), y + random(-5, 5), 10);
                 }
