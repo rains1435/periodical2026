@@ -40,7 +40,7 @@
     * [ ] Bromine (35) - Tina
     * [ ] Silver (47) - Edward
     * [ ] Cesium (55) - Abdel
-    * [ ] Gold (79) - Alexander
+    * [X] Gold (79) - Alexander
     * [ ] Cesium (55) - Abdel
     * [ ] Lawrencium (103) - Lixin
 
