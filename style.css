@@ -77,6 +77,9 @@ a {
     color: inherit;
     /* display:block; */
 }
+img{
+  border-radius: 5px;
+}
 
 #credits {
   padding: 0px 60px 0px 60px;
@@ -99,10 +102,12 @@ a {
 }
 .picture {
   margin:auto;
+  border: 1px solid #d6d6d6;
+  border-radius: 7px;
 }
 .description {
   margin: auto;
-  max-width:220px;
+  width:218px;
 }
 .name{
   margin: 16px 0px 5px 0px;

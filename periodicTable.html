@@ -15,12 +15,15 @@
         height: 100vh !important;
       }
       span {
-        padding: 20px 20px;
-        margin-top: 10px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
         border: 2px solid black;
-        width: 20px;
-        height: 30px;
         cursor: pointer;
+        width: 50px;
+        height: 50px;
       }
 
       .idk {
@@ -28,6 +31,28 @@
         width: 100%;
         justify-content: space-between;
         padding: 0px 50px;
+      }
+
+      @media (max-width: 1115px) {
+        .idk {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #canvas {
+            display: flex;
+            flex-direction: column;
+        }
+        h2{
+            width:100vw;
+        }
+        p{
+            font-size: 10rem;
+            width: 100%;
+        }
+        #description{
+            width:90vw
+        }
       }
       .top {
         margin-top: 1vw;
@@ -47,11 +72,26 @@
       h2 {
         margin-left: 10vw;
       }
-      p {
+      #description {
         margin-left: 2vw;
         margin-right: 2vw;
-        font-size: 2vw;
+        font-size: 20px;
       }
+      h1{
+        text-align:center
+      }
+      @media (max-width:1200px) and (min-width:401px){
+        h1{
+            text-align:left;
+            margin-left:111px
+        }
+      }
+      @media(max-width:400px){
+        h1{
+            text-align:center;
+        }
+      }
+
     </style>
 
     <title>Title</title>
@@ -72,7 +112,7 @@
         <div class="elements temp" id="nonmetals"></div>
       </div>
     </div>
-    <div style="display: flex">
+    <div style="display: flex" id="canvas">
       <div class="information sec">
         <h2 id="name"></h2>
         <h2 id="symbol"></h2>
@@ -105,14 +145,14 @@
           name: "Helium",
           atomicNumber: 2,
           symbol: "He",
-          description: `Discovery: Helium was discovered in ... by ... <br> Roots of its name: ... <br> Interesting fact/trivia: ...`,
+          description: `Discovery: Helium was discovered in 1868 by Sir William Ramsey. <br> Roots of its name: Named after Helios, the Greek sun god. <br> Interesting fact/trivia: Sound travels faster in helium than it does oxygen, and it lets your vocal cords vibrate more and this is what makes your voice squeaky when you breathe it in.`,
           type: "nonmetal",
         },
         {
           name: "Lithium",
           atomicNumber: 3,
           symbol: "Li",
-          description: `Discovery: Lithium was discovered in 1817 by Johan August Arfwedson. <br> Roots of its name: From the Greek word "lithos," which means "stone". Was called this because it was discovered in a solid mineral instead of a plant. <br> 
+          description: `Discovery: Lithium was discovered in 1817 by Johan August Arfwedson. <br> Roots of its name: From the Greek word "lithos," which means "stone". Was called this because it was discovered in a solid mineral instead of a plant. <br>
                     Interesting fact/trivia: Its one of only three elements created in significant amounts during the Big Bang, alongside hydrogen and helium. Some of the lithium on Earth today is 13.8 billion year old cosmic leftovers. (If the 13.8 billion years measured as a year the whole of human history would just be the last 2 seconds.)
 
 `,
@@ -129,109 +169,110 @@
           name: "Oxygen",
           atomicNumber: 8,
           symbol: "O",
-          description: `Discovery: ... was discovered in ... by ... <br> Roots of its name: ... <br> Interesting fact/trivia: ...`,
+          description: `Discovery: Oxygen was discovered in ... by ... <br> Roots of its name: ... <br> Interesting fact/trivia: ...`,
           type: "nonmetal",
         },
         {
           name: "Aluminum",
           atomicNumber: 13,
           symbol: "Al",
-          description: `Discovery: ... was discovered in ... by ... <br> Roots of its name: ... <br> Interesting fact/trivia: ...`,
+          description: `Discovery: Aluminum was discovered in ... by ... <br> Roots of its name: ... <br> Interesting fact/trivia: ...`,
           type: "metalloids",
         },
         {
           name: "Phosphorus",
           atomicNumber: 15,
           symbol: "P",
-          description: `Discovery: ... was discovered in ... by ... <br> Roots of its name: ... <br> Interesting fact/trivia: ...`,
+          description: `Discovery: Phosphorus was discovered in ... by ... <br> Roots of its name: ... <br> Interesting fact/trivia: ...`,
           type: "nonmetal",
         },
         {
           name: "Sulfur",
           atomicNumber: 16,
           symbol: "S",
-          description: `Discovery: ... was discovered in ... by ... <br> Roots of its name: ... <br> Interesting fact/trivia: ...`,
+          description: `Discovery: Sulfur was discovered in 1894 by Sir William Ramsay and Lord Rayleigh. <br> Roots of its name: A Greek word that means “lazy” or “inactive”. <br> Interesting fact/trivia: Argon is used for lasers, plasma balls, light bulbs, and rocket propellants.`,
           type: "nonmetal",
         },
         {
           name: "Argon",
           atomicNumber: 18,
           symbol: "Ar",
-          description: `Discovery: ... was discovered in ... by ... <br> Roots of its name: ... <br> Interesting fact/trivia: ...`,
+          description: `Discovery: Argon was discovered in ... by ... <br> Roots of its name: ... <br> Interesting fact/trivia: ...`,
           type: "nonmetal",
         },
         {
           name: "Potassium",
           atomicNumber: 19,
           symbol: "K",
-          description: `Discovery: ... was discovered in ... by ... <br> Roots of its name: ... <br> Interesting fact/trivia: ...`,
+          description: `Discovery: Potassium was discovered in ... by ... <br> Roots of its name: ... <br> Interesting fact/trivia: ...`,
           type: "metal",
         },
         {
           name: "Calcium",
           atomicNumber: 20,
           symbol: "Ca",
-          description: `Discovery: ... was discovered in ... by ... <br> Roots of its name: ... <br> Interesting fact/trivia: ...`,
+          description: `Discovery: Calcium was discovered in ... by ... <br> Roots of its name: ... <br> Interesting fact/trivia: ...`,
           type: "metal",
         },
         {
           name: "Bromine",
           atomicNumber: 35,
           symbol: "Br",
-          description: `Discovery: ... was discovered in ... by ... <br> Roots of its name: ... <br> Interesting fact/trivia: ...`,
+          description: `Discovery: Bromine was discovered in ... by ... <br> Roots of its name: ... <br> Interesting fact/trivia: ...`,
           type: "nonmetal",
         },
         {
           name: "Silver",
           atomicNumber: 47,
           symbol: "Ag",
-          description: `Discovery: ... was discovered in ... by ... <br> Roots of its name: ... <br> Interesting fact/trivia: ...`,
+          description: `Discovery: Silver was discovered in ... by ... <br> Roots of its name: ... <br> Interesting fact/trivia: ...`,
           type: "metal",
         },
         {
           name: "Cesium",
           atomicNumber: 55,
           symbol: "Cs",
-          description: `Discovery: ... was discovered in ... by ... <br> Roots of its name: ... <br> Interesting fact/trivia: ...`,
+          description: `Discovery: Cesium was discovered in ... by ... <br> Roots of its name: ... <br> Interesting fact/trivia: ...`,
           type: "metal",
         },
         {
           name: "Gold",
           atomicNumber: 79,
           symbol: "Au",
-          description: `Discovery: ... was discovered in ... by ... <br> Roots of its name: ... <br> Interesting fact/trivia: ...`,
+          description: `Discovery: Gold was discovered since the dawn of time by the people living in the old world. <br> Roots of its name: Gold is named after the Anglo-Saxon word for metal. <br> Interesting fact/trivia: Synthetic Gold was first created by a Japanese physicist, who used neutron bombardment to transform mercury into gold. This came at a very expensive cost, as the cost to produce one ounce of it ranged from trillions to one quadrillion dollars, while Gold itself is only about 3000 dollars per ounce. A similar process happened years later in 1980, when Glenn Seaborg transmuted bismuth into gold using a particle accelerator, but the cost still came to about 1 quadrillion dollars per ounce.`,
           type: "metal",
         },
         {
           name: "Lawrencium",
           atomicNumber: 103,
           symbol: "Lr",
-          description: `Discovery: ... was discovered in ... by ... <br> Roots of its name: ... <br> Interesting fact/trivia: ...`,
+          description: `Discovery: Lawrencium was discovered in ... by ... <br> Roots of its name: ... <br> Interesting fact/trivia: ...`,
           type: "metal",
         },
 
-        {
-          name: "Helium",
-          atomicNumber: 2,
-          symbol: "He",
-          description: "He is ...",
-          type: "nonmetal",
-        },
-        {
-          name: "Aluminum",
-          atomicNumber: 13,
-          symbol: "Al",
-          description: "Al is ....",
-          type: "metalloid",
-        },
-        {
-          name: "Lithium",
-          atomicNumber: 3,
-          symbol: "Li",
-          description: "Li is...",
-          type: "metal",
-        },
+        // {
+        //   name: "Helium",
+        //   atomicNumber: 2,
+        //   symbol: "He",
+        //   description: "He is ...",
+        //   type: "nonmetal",
+        // },
+        // {
+        //   name: "Aluminum",
+        //   atomicNumber: 13,
+        //   symbol: "Al",
+        //   description: "Al is ....",
+        //   type: "metalloid",
+        // },
+        // {
+        //   name: "Lithium",
+        //   atomicNumber: 3,
+        //   symbol: "Li",
+        //   description: "Li is...",
+        //   type: "metal",
+        // },
       ];
+
       var atomicName;
       var atomicSymbol;
       var atomicNumber;
@@ -274,9 +315,13 @@
           document.querySelector("#description").innerHTML = description;
         });
       });
-
+      var w = 700;
+      var h = 440;
       function setup() {
-        var canvas = createCanvas(700, 440);
+        if (window.innerWidth <= 1115){
+            w = window.innerWidth
+        }
+        var canvas = createCanvas(w, h);
         canvas.parent("theCanvas");
         frameRate(5);
       }
@@ -298,8 +343,7 @@
             }
           } else if (typeOfElement == "nonmetal") {
             for (var x = 10; x < width - 5; x += 50) {
-              for (var y = 10; y < height / 2.5; y += 50) {
-                // ellipse(x + random(-5, 5),y + random(-5,5),10)
+              for (var y = 10; y < height-2.5; y += 50) {
                 if (random(100) > 50) {
                   ellipse(x + random(-5, 5), y + random(-5, 5), 10);
                 }
