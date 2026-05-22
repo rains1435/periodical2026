@@ -15,12 +15,15 @@
         height: 100vh !important;
       }
       span {
-        padding: 20px 20px;
-        margin-top: 10px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
         border: 2px solid black;
-        width: 20px;
-        height: 30px;
         cursor: pointer;
+        width: 50px;
+        height: 50px;
       }
 
       .idk {
@@ -28,6 +31,28 @@
         width: 100%;
         justify-content: space-between;
         padding: 0px 50px;
+      }
+
+      @media (max-width: 1115px) {
+        .idk {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #canvas {
+            display: flex;
+            flex-direction: column;
+        }
+        h2{
+            width:100vw;
+        }
+        p{
+            font-size: 10rem;
+            width: 100%;
+        }
+        #description{
+            width:90vw
+        }
       }
       .top {
         margin-top: 1vw;
@@ -47,11 +72,26 @@
       h2 {
         margin-left: 10vw;
       }
-      p {
+      #description {
         margin-left: 2vw;
         margin-right: 2vw;
-        font-size: 2vw;
+        font-size: 20px;
       }
+      h1{
+        text-align:center
+      }
+      @media (max-width:1200px) and (min-width:401px){
+        h1{
+            text-align:left;
+            margin-left:111px
+        }
+      }
+      @media(max-width:400px){
+        h1{
+            text-align:center;
+        }
+      }
+
     </style>
 
     <title>Title</title>
@@ -72,7 +112,7 @@
         <div class="elements temp" id="nonmetals"></div>
       </div>
     </div>
-    <div style="display: flex">
+    <div style="display: flex" id="canvas">
       <div class="information sec">
         <h2 id="name"></h2>
         <h2 id="symbol"></h2>
@@ -275,9 +315,13 @@
           document.querySelector("#description").innerHTML = description;
         });
       });
-
+      var w = 700;
+      var h = 440;
       function setup() {
-        var canvas = createCanvas(700, 440);
+        if (window.innerWidth <= 1115){
+            w = window.innerWidth
+        }
+        var canvas = createCanvas(w, h);
         canvas.parent("theCanvas");
         frameRate(5);
       }
