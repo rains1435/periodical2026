@@ -17,7 +17,8 @@
       body {
         height: 100vh !important;
       }
-      span {
+
+      .elementspan {
         text-align: center;
         display: flex;
         align-items: center;
@@ -104,6 +105,31 @@
   </head>
   <body>
     <!-- HTML -->
+      <nav class="navbar bg-body-tertiary navbar-expand-lg shadow" data-bs-theme="light">
+        <div class="container-fluid">
+            <span class="mb-0 inter-regular">Periodical 2026</span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link inter-regular" aria-current="page" href="../index.html#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link inter-regular" aria-current="page" href="../index.html#unit-content">Review</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link inter-regular" aria-current="page" href="../index.htmlperiodicTable.html">The Elements</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link inter-regular" aria-current="page" href="../index.html#credits">Credits</a>
+                </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     <div class="idk">
       <div class="sec metals">
         <h1 class = "inter-bold">Metals</h1>
@@ -254,6 +280,7 @@
         const newSpan = document.createElement("span");
         newSpan.innerHTML = el.symbol;
         newSpan.id = el.atomicNumber;
+        newSpan.classList.add("elementspan");
         newSpan.setAttribute("data-atomic-number", el.atomicNumber);
         newSpan.setAttribute("data-symbol", el.symbol);
         newSpan.setAttribute("data-desc", el.description);
