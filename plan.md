@@ -1,8 +1,8 @@
 # Plan
 
-* [ ] Homepage 
+* [ ] Homepage
     * [ ] Top section: Show the element of the day and a button to go to the elements page
-    * [ ] Display Units
+    * [X] Display Units
     * [ ] Credits - Tina and Jolee
 
 * [ ] Template for Units
@@ -12,10 +12,10 @@
 * [ ] CSS
     * [ ] fonts
     * [ ] background & colors
-    * [ ] text size
+    * [X] text size
 
 * [ ] Bootstrap
-    * [ ] Page formatting on different screens
+    * [X] Page formatting on different screens
 
 
 * [ ] Vocabulary list:
@@ -36,22 +36,21 @@
         * [X] Helium (2) - Gabriel
         * [X] Lithium (3) - Darren
         * [ ] Nitrogen (7) - Yiwen
-        * [ ] Oxygen (8) - Leo
+        * [X] Oxygen (8) - Leo
         * [ ] Phosphorus (15) - Shi Jun
-        * [ ] Sulfur (16) - Rain
+        * [X] Sulfur (16) - Rain
         * [X] Argon (18) - William
-        * [ ] Potassium (19) - Nancy
-        * [ ] Calcium (20) - Jolee
-        * [ ] Bromine (35) - Tina
-        * [ ] Silver (47) - Edward
-        * [ ] Cesium (55) - Abdel
+        * [X] Potassium (19) - Nancy
+        * [X] Calcium (20) - Jolee
+        * [X] Bromine (35) - Tina
+        * [X] Silver (47) - Edward
+        * [X] Cesium (55) - Abdel
         * [X] Gold (79) - Alexander
-        * [ ] Cesium (55) - Abdel
         * [ ] Lawrencium (103) - Lixin
 
 ## Wait for Writers to give information first
 
-* [ ] Add information/text on website (Units): - Gabriel and Nancy 
+* [ ] Add information/text on website (Units): - Gabriel and Nancy
     * [ ] Unit 1 information/text - Cammi and Winnie
         * [ ] Real world connection:
         * [ ] Misconception:

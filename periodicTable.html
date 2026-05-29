@@ -17,7 +17,8 @@
       body {
         height: 100vh !important;
       }
-      span {
+
+      .elementspan {
         text-align: center;
         display: flex;
         align-items: center;
@@ -104,6 +105,31 @@
   </head>
   <body>
     <!-- HTML -->
+      <nav class="navbar bg-body-tertiary navbar-expand-lg shadow" data-bs-theme="light">
+        <div class="container-fluid">
+            <span class="mb-0 inter-regular">Periodical 2026</span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link inter-regular" aria-current="page" href="../index.html#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link inter-regular" aria-current="page" href="../index.html#unit-content">Review</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link inter-regular" aria-current="page" href="../index.htmlperiodicTable.html">The Elements</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link inter-regular" aria-current="page" href="../index.html#credits">Credits</a>
+                </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     <div class="idk">
       <div class="sec metals">
         <h1 class = "inter-bold">Metals</h1>
@@ -197,7 +223,7 @@
           name: "Potassium",
           atomicNumber: 19,
           symbol: "K",
-          description: `Discovery: Potassium was discovered in ... by ... <br> Roots of its name: ... <br> Interesting fact/trivia: ...`,
+          description: `Discovery: Potassium was discovered in 1807 by English chemist Sir Humphry Davy <br> Roots of its name: The name is deruved from the English word "Potash". <br> Interesting fact/trivia: The average adult human consumes 2640 mg of potassium daily (3,400 mg for men, 2,600 mg for women). A medium-sized banana contains about 422 mg of potassium. There are other great sources of food that contains potassium, such as, baked potato (20% of the daily value), dried apricots (16% of the daily value), lentils (16% of the daily value), kidney beans (15% of the daily value), and so forth.`,
           type: "metal",
         },
         {
@@ -211,21 +237,21 @@
           name: "Bromine",
           atomicNumber: 35,
           symbol: "Br",
-          description: `Discovery: Bromine was discovered in ... by ... <br> Roots of its name: ... <br> Interesting fact/trivia: ...`,
+          description: `Discovery: Bromine was discovered in 1825 by French chemist Antoine-Jerome Balard and German chemist Carl Jacob Lowig <br> Roots of its name: Came from the Greek word bromos that means stench and added the suffix -ine. <br> Interesting fact/trivia: Bromine was used as a chemical weapon in WWI in the form of tear gas. It causes burning sensation, coughing, sneezing, shortness of breath and rashes.`,
           type: "nonmetal",
         },
         {
           name: "Silver",
           atomicNumber: 47,
           symbol: "Ag",
-          description: `Discovery: Silver was discovered in ... by ... <br> Roots of its name: ... <br> Interesting fact/trivia: ...`,
+          description: `Discovery: Silver was discovered around 3000 BCE in Anatolia by multiple people. <br> Roots of its name: Old English seolfor, which itself evolved from the Proto-Germanic word silubra, means silver. <br> Interesting fact/trivia: Silver is an unmatched conductor. Silver scores 100% on the scale of electrical conductivity, with copper coming in second at 97%.`,
           type: "metal",
         },
         {
           name: "Cesium",
           atomicNumber: 55,
           symbol: "Cs",
-          description: `Discovery: Cesium was discovered in ... by ... <br> Roots of its name: ... <br> Interesting fact/trivia: ...`,
+          description: `Discovery: Cesium was discovered in May 10, 1860, by Robert Bunsen and Gustav Kirchoff <br> Roots of its name: The name “cesium” comes from the Latin word caesius, meaning “sky blue,” because of the bright blue spectral lines seen when it was discovered. <br> Interesting fact/trivia: Cesium-133 is used to define the length of one second. Scientists measure a second using the vibrations of cesium atoms in atomic clocks. Exactly 9,192,631,770 vibrations of Cesium-133 are what defines a second 1 second. The way this is tested is through the use of microwaves to make cesium atoms “tick.” When the microwave frequency matches the atom perfectly, the atoms react strongly, and that exact frequency is used to keep time. This is very very accurate. Lose about 1 second in 100 million years.`,
           type: "metal",
         },
         {
@@ -254,6 +280,7 @@
         const newSpan = document.createElement("span");
         newSpan.innerHTML = el.symbol;
         newSpan.id = el.atomicNumber;
+        newSpan.classList.add("elementspan");
         newSpan.setAttribute("data-atomic-number", el.atomicNumber);
         newSpan.setAttribute("data-symbol", el.symbol);
         newSpan.setAttribute("data-desc", el.description);
@@ -269,7 +296,7 @@
           metals.appendChild(newSpan);
         }
       });
-      document.querySelectorAll("span").forEach(function (eachElement) {
+      document.querySelectorAll(".elementspan").forEach(function (eachElement) {
         eachElement.addEventListener("click", function (event) {
           atomicName = event.target.dataset.atomicName;
           atomicSymbol = event.target.dataset.symbol;
